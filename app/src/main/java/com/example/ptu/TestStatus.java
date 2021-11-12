@@ -65,32 +65,7 @@ public class TestStatus extends MainActivity {
     }
 
     public void getResult(View v) {
-        LayoutInflater li = LayoutInflater.from(this);
-        View promptsView = li.inflate(R.layout.dialog_test_status, null);
-
-        AlertDialog.Builder DialogAddedEl = new AlertDialog.Builder(this);
-
-        DialogAddedEl.setView(promptsView);
-        final EditText TestStatusInputVal = (EditText) promptsView.findViewById(R.id.testStatusInputVal);
-
-        DialogAddedEl.setCancelable(false).setPositiveButton("OK",
-                new DialogInterface.OnClickListener() {
-                    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-                    public void onClick(DialogInterface dialog, int id) {
-                        if (TestStatusInputVal.getText().toString() == "") {
-                            TestStatusInputVal.setText(0);
-                        }
-                        Intent intent = new Intent(TestStatus.this, TestStatusResult.class);
-                        intent.putExtra("data", TestStatusInputVal.getText().toString());
-                        startActivity(intent);
-                    }
-                }).setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog,int id) {
-                dialog.cancel();
-            }
-        });
-        AlertDialog alertDialog = DialogAddedEl.create();
-
-        alertDialog.show();
+        Intent intent = new Intent(this, TestStatusResult.class);
+        startActivity(intent);
     }
 }

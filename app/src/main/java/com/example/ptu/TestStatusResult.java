@@ -20,21 +20,14 @@ public class TestStatusResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_status_result);
 
-        int ResultVal = Integer.parseInt(getIntent().getStringExtra("data"));
         ProgressBar mProgressBar = (ProgressBar) findViewById(R.id.progressStatus);
         TextView ResultBtn = (TextView) findViewById(R.id.progressSting);
 
-        ObjectAnimator animator = ObjectAnimator.ofInt(mProgressBar, "progress", 0, ResultVal);
+        ObjectAnimator animator = ObjectAnimator.ofInt(mProgressBar, "progress", 0, 80);
         animator.setInterpolator(new BounceInterpolator());
         animator.setDuration(3000);
         animator.start();
 
-        if (ResultVal < 35) {
-            ResultBtn.setText(R.string.testResponseBadResult);
-        } else if (ResultVal < 70) {
-            ResultBtn.setText(R.string.testResponseMidResult);
-        } else {
-            ResultBtn.setText(R.string.testResponseGoodResult);
-        }
+        ResultBtn.setText(R.string.testResponseGoodResult);
     }
 }
