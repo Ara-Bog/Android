@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorCustomMainBg"
+    tools:context=".MainTodoList">
+
+
+    <TextView
+        android:id="@+id/zz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/colorCustomTitle"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:text="@string/todolist_label"></TextView>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/todoListWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorCustomLabel"
+            android:background="@color/colorCustomElBg"
+            android:padding="30px"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="20dp"
+            android:text="Дела по работе"
+            android:onClick="TakeTodoList"/>
+
+        <Button
+            android:id="@+id/todoListHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorCustomLabel"
+            android:background="@color/colorCustomElBg"
+            android:padding="30px"
+            android:stateListAnimator="@null"
+            android:text="Домашние дела"
+            android:onClick="TakeTodoList"/>
+    </LinearLayout>
+</LinearLayout>

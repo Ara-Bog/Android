@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TestStatus"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/testTitle"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="45px"
+        android:layout_marginBottom="20dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="?android:attr/alertDialogIcon" />
+        <TextView
+            android:paddingLeft="30dp"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorCustomText"
+            android:textStyle="italic"
+            android:textSize="30px"
+            android:text="@string/testDescription"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="40px"
+        android:text="Тест"
+        android:layout_marginBottom="5dp"></TextView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/TestOptionsText"
+            android:text="@string/testBirthday"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <Spinner
+                style="@style/TestOptionSpinner"
+                android:id="@+id/testBirthdayDay"/>
+
+            <Spinner
+                android:id="@+id/testBirthdayMonth"
+                style="@style/TestOptionSpinner"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+                <Spinner
+                android:id="@+id/testBirthdayYear"
+                style="@style/TestOptionSpinner"/>
+
+            <TextView
+                style="@style/TestOptionsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@null"
+                android:text="Пол:"></TextView>
+
+            <Spinner
+                android:id="@+id/testSex"
+                style="@style/TestOptionSpinner"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TestOptionsText"
+            android:text="@string/testOption1"></TextView>
+
+        <TextView
+            style="@style/TestOptionsText"
+            android:text="@string/testOption2"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/TestOptionsText"
+                android:layout_width="wrap_content"
+                android:text="@string/testOption3"></TextView>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="30px"></EditText>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TestOptionsText"
+            android:text="@string/testOption4"></TextView>
+
+        <TextView
+            style="@style/TestOptionsText"
+            android:text="@string/testOption5"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/TestOptionsText"
+                android:layout_width="wrap_content"
+                android:text="@string/testOption6"></TextView>
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="30px"></EditText>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TestOptionsText"
+            android:text="@string/testOption7"></TextView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/clock_removebg_preview"
+        android:layout_marginTop="20dp"></ImageView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ввод"
+        android:layout_marginTop="20dp"
+        android:onClick="getResult"></Button>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".GuessSet">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/guessOutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_value"/>
+
+        <EditText
+            android:id="@+id/guessInput"
+            android:layout_width="153dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/guessSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="guessNum"
+            android:text="@string/play_more"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/guessComplexityDescription"
+            android:layout_width="wrap_content"
+            android:maxWidth="300dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/complexity_easy_description"/>
+    </LinearLayout>
+</LinearLayout>

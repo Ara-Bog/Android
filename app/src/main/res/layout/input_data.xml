@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".WorkData">
+
+    <EditText
+        android:id="@+id/inputData_name"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:hint="@string/what_send_data"/>
+
+    <EditText
+        android:id="@+id/inputData_count"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:hint="@string/how_send_data"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/guessSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendData"
+        android:text="@string/send_data"/>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="40dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".FilterIntent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/whatNeeds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/needGoing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Будем переходить"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/needCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Будем звонить" />
+        </RadioGroup>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/inputURL"
+        android:hint="Ваша ссылка"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></EditText>
+    <Button
+        android:id="@+id/submitURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="parseLink"
+        android:text="Перейти"/>
+</LinearLayout>
