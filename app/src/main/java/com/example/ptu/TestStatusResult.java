@@ -20,14 +20,26 @@ public class TestStatusResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_status_result);
 
-        ProgressBar mProgressBar = (ProgressBar) findViewById(R.id.progressStatus);
-        TextView ResultBtn = (TextView) findViewById(R.id.progressSting);
+        ProgressBar mProgressBar = findViewById(R.id.progressStatus);
+        TextView ResultBtn = findViewById(R.id.progressSting);
 
-        ObjectAnimator animator = ObjectAnimator.ofInt(mProgressBar, "progress", 0, 80);
+        String requestTest = getIntent().getStringExtra("request");
+        int progressVal;
+
+        if (requestTest.contains("отсутствию переутомления")) {
+            progressVal = 80;
+        } else if (requestTest.contains("небольшому переутомлению")) {
+            progressVal = 50;
+        } else if (requestTest.contains("высокому уровню переутомления")) {
+            progressVal = 20;
+        } else {
+            progressVal = 0;
+        }
+        ObjectAnimator animator = ObjectAnimator.ofInt(mProgressBar, "progress", 0, progressVal);
         animator.setInterpolator(new BounceInterpolator());
         animator.setDuration(3000);
         animator.start();
 
-        ResultBtn.setText(R.string.testResponseGoodResult);
+        ResultBtn.setText(requestTest);
     }
 }

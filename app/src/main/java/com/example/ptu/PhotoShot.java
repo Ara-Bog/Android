@@ -30,8 +30,8 @@ public class PhotoShot extends MainActivity {
         }
     }
 
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
             // Фотка сделана, извлекаем миниатюру картинки
             Bundle extras = data.getExtras();

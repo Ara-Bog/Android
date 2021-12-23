@@ -10,6 +10,7 @@
     <string name="menu_photo">Камера</string>
     <string name="menu_todoList">Список дел</string>
     <string name="menu_testStatus">Тест на работу</string>
+    <string name="menu_userForm">Форма студента</string>
     <string name="menu_exit">Выход</string>
     <string name="behind">Недолет!</string>
     <string name="ahead">Перелет!</string>
@@ -55,4 +56,8 @@
     <string name="testResponseGoodResult">отсутствию переутомления</string>
     <string name="testResponseMidResult">среднему переутомлению</string>
     <string name="testResponseBadResult">наличию переутомления</string>
+    <string name="formUser_name">Имя: </string>
+    <string name="formUser_group">Группа: </string>
+    <string name="formUser_age">Возраст: </string>
+    <string name="formUser_dateB">Дата рождения: </string>
 </resources>

@@ -43,9 +43,9 @@
             android:layout_height="20dp"
             android:minHeight="20dp"
             android:maxHeight="20dp"
+            android:progressTint="@color/design_default_color_error"
             android:min="0"
-            android:max="100"
-            android:background="@color/design_default_color_error"/>
+            android:max="100"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,14 +54,6 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"></ImageView>
     </LinearLayout>
-    <TextView
-        android:textColor="@color/colorCustomText"
-        android:textSize="30px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/testValueResult"
-        android:gravity="center"
-        android:textStyle="italic"></TextView>
     <TextView
         android:id="@+id/progressSting"
         android:textColor="@color/colorCustomText"
