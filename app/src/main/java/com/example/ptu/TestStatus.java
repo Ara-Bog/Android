@@ -84,10 +84,10 @@ public class TestStatus extends MainActivity {
             response.append(inputLine);
         }
         String REresponse = String.valueOf(response);
-        if (REresponse.contains("Error")) {
-            REresponse = "Error";
-        } else {
+        if (REresponse.contains("Введенные")) {
             REresponse = REresponse.substring(REresponse.indexOf("<body>") + 6, REresponse.indexOf("</body>"));
+        } else {
+            REresponse = "Error";
         }
         getReq.close();
         return REresponse;
